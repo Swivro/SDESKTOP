@@ -1,0 +1,8 @@
+Before launching SDESKTOP...
+Your browser must support JavaScript.
+You must have SDESKTOP on a web server with PHP installed, JavaScript Enabled, and CSS Enabled.
+
+To launch SDESKTOP, you need to run the index.html file.
+To edit the files of SDESKTOP, you can launch index.html and then click Source Code Editor.
+
+- Swivro.com
