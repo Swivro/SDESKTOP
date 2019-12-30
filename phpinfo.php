@@ -174,7 +174,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <span class="close">&times;</span>
     <?php
 $dd=array(
-	'Server Address'=>$_SERVER['SERVER_ADDR'],
+	'Server IP Address'=>$_SERVER['SERVER_ADDR'],
 	'Server Name'=>$_SERVER['SERVER_NAME'],
 	'Server Software'=>$_SERVER['SERVER_SOFTWARE'],
 	'Document Root'=>$_SERVER['DOCUMENT_ROOT'],
