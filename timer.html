@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>sDesktop</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a><a class="nav-link active" href="grapejs/index.html"><i></i><span>GrapeJS</span></a><a class="nav-link active"
+                                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a><a class="nav-link active" href="grapejs/index.html"><i></i><span>GrapeJS</span></a><a class="nav-link active"
                             href="htmly.html"><i></i><span>HTMLy</span></a></li> 
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div><a href="index.html"></a></div>
@@ -39,7 +39,7 @@
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                                              <h3 class="text-dark mb-0">Dashboard</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="index.html"  > Home</a></div>
+                                                <h3 class="text-dark mb-0">Dashboard</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="index.html"  > Home</a></div>
                     <div class="row">
                         <div class="col-md-6 col-xl-3 mb-4">
                             <div class="card shadow border-left-primary py-2">
@@ -72,7 +72,7 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col mr-2">
-                                            <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span>JAVASCRIPT + PHP SUPPORT</span></div>
+                                            <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span>PHP + JS SUPPORT</span></div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
                                                     <div class="text-dark font-weight-bold h5 mb-0 mr-3"><span>REQUIRED</span></div>
@@ -110,7 +110,75 @@
                     <div class="row">
                         <div class="col-lg-6 mb-4">
                             <div class="card shadow mb-4"><div class="card-body">
-  <h3>SDESKTOP is a virtual desktop that you can view over your browser which uses HTML.  It is free to use and is constantly being developed.</h3>
+
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<script type="text/javascript">
+// set minutes
+var mins = 5;
+ 
+// calculate the seconds (don't change this! unless time progresses at a different speed for you...)
+var secs = mins * 60;
+function countdown() {
+	setTimeout('Decrement()',1000);
+}
+function Decrement() {
+	if (document.getElementById) {
+		minutes = document.getElementById("minutes");
+		seconds = document.getElementById("seconds");
+		// if less than a minute remaining
+		if (seconds < 59) {
+			seconds.value = secs;
+		}
+                else {
+			minutes.value = getminutes();
+			seconds.value = getseconds();
+		}
+                if(mins<2)
+                    {
+                        minutes.style.color="red";
+                        seconds.style.color="red";
+                    }
+                 if(mins<0)
+                 {
+alert('Time is up');
+document.forms["s"].submit();
+//location.href = "index.jsp";
+minutes.value=0;
+seconds.value=0;
+                 }
+                 else
+                     {
+		secs--;
+		setTimeout('Decrement()',1000);
+                     }
+            }
+}
+function getminutes() {
+	// minutes is seconds divided by 60, rounded down
+	mins = Math.floor(secs / 60);
+       
+	return mins;
+}
+function getseconds() {
+	// take mins remaining (as seconds) away from total seconds remaining
+	return secs-Math.round(mins *60);
+}
+</script>
+</head>
+<body onload="countdown();">
+ 
+<div>
+    Time left <input id="minutes" type="text" style="width: 10px; border: none; font-size: 16px; font-weight: bold; color: black;"><font size="5"> :</font><input id="seconds" type="text" style="width: 20px; border: none; font-size: 16px; font-weight: bold; color: black;"> 
+</div>
+    
+
+</body></html>
+
+
+
 </div></div>
                             <div class="card shadow mb-4">
                                 <ul class="list-group list-group-flush"></ul>
@@ -120,113 +188,34 @@
                             <div class="row">
                                 <div class="col-lg-6 mb-4">
                                     <div class="card text-white bg-primary shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Calculator</p>
-                                            <p class="text-white-50 small m-0">A simple calculator on SDESKTOP.</p>
-											<hr>
-											<a href = "calc.html"><button>Open Calculator</button></a>
-											<hr>
-											
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
                                     <div class="card text-white bg-success shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Clock</p>
-                                            <p class="text-white-50 small m-0">Simple Clock App for SDESKTOP which shows the time.</p>
-											<hr>
-											<a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="clock.html">  Open Clock</a>
-											<hr>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
                                     <div class="card text-white bg-info shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Calendar</p>
-                                            <p class="text-white-50 small m-0">A simple calendar app for SDESKTOP that shows the date, month and year.</p>
-											<hr>
-											<a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="calendar.html">  Open Calendar</a>
-											<hr>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
                                     <div class="card text-white bg-warning shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">System Information</p>
-                                            <p class="text-white-50 small m-0">View your website server information through PHP.</p>
-                                            <hr>
-											<a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="phpinfo.php">  Open Information</a>
-											<hr>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
                                     <div class="card text-white bg-danger shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Upgrade sDesktop</p>
-                                            <p class="text-white-50 small m-0">Instructions on how to upgrade sDesktop</p>
-                                            <hr>
-											<a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="upgrade.html">  Open Instructions</a>
-											<hr>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
                                     <div class="card text-white bg-secondary shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Google Safe Search</p>
-                                            <p class="text-white-50 small m-0">Search the web with Google Safe Search on SDESKTOP.</p>
-                                            <hr>
-											<a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="search.html">  Google Safe Search</a>
-											<hr>
-                                        </div>
+                                        
                                     </div>
                                 </div>
-								
-
-
-<html>
-<head>
-<style>
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>
-</head>
-<body>
-
-<hr>
-
-
-<div class="dropdown">
-  <button class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="calendar.html">  More Tools/Apps</button>
-  <div class="dropdown-content">
-  <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="timer.html">  5 Minute Timer</a>
-  <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="issues.html">  Report Issues</a>
-  </div>
-</div>
-</body>
-</html>
-
-								
                             </div>
                         </div>
                     </div>
@@ -237,7 +226,7 @@
                     <div class="text-center my-auto copyright"><span>Copyright © SDESKTOP 2020</span></div>
                 </div>
             </footer>
-        </div></div>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
